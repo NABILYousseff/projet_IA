@@ -1,0 +1,351 @@
++-------------------------------+--------------+------+-----+---------+-------+
+| Field                         | Type         | Null | Key | Default | Extra |
++-------------------------------+--------------+------+-----+---------+-------+
+| videoID                       | varchar(20)  | YES  | MUL | NULL    |       |
+| category                      | varchar(256) | YES  |     | NULL    |       |
+| bitrates_144p                 | int          | YES  |     | NULL    |       |
+| bitrates_240p                 | int          | YES  |     | NULL    |       |
+| bitrates_360p                 | int          | YES  |     | NULL    |       |
+| bitrates_480p                 | int          | YES  |     | NULL    |       |
+| bitrates_720p                 | int          | YES  |     | NULL    |       |
+| bitrates_1080p                | int          | YES  |     | NULL    |       |
+| join_time                     | int          | YES  |     | NULL    |       |
+| stallingNumber                | int          | YES  |     | NULL    |       |
+| totalStallDuration            | int          | YES  |     | NULL    |       |
+| outbandQoS_DL_TP              | float        | YES  |     | NULL    |       |
+| outbandQoS_UL_TP              | float        | YES  |     | NULL    |       |
+| outbandQoS_RTT                | float        | YES  |     | NULL    |       |
+| outbandQoS_RTT_STD            | float        | YES  |     | NULL    |       |
+| outbandQoS_LOSS               | float        | YES  |     | NULL    |       |
+| pcapStats_stats_avg_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_avg_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_avg_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_avg_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_max_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_max_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_max_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_max_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_std_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_std_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_std_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_std_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p10_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p10_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p10_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p10_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p20_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p20_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p20_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p20_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p30_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p30_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p30_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p30_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p40_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p40_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p40_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p40_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p50_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p50_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p50_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p50_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p60_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p60_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p60_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p60_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p70_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p70_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p70_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p70_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p80_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p80_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p80_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p80_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p90_DL_TP     | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p90_UL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p90_DL_t      | float        | YES  |     | NULL    |       |
+| pcapStats_stats_p90_DL_pkt    | float        | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t1    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t2    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t3    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t4    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t5    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t6    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t7    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t8    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t9    | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t10   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t11   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t12   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t13   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t14   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t15   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t16   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t17   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t18   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t19   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t20   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t21   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t22   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t23   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t24   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t25   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t26   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t27   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t28   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t29   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t30   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t31   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t32   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t33   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t34   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t35   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t36   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t37   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t38   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t39   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t40   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t41   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t42   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t43   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t44   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t45   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t46   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t47   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t48   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t49   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t50   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t51   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t52   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t53   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t54   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t55   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t56   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t57   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t58   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t59   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t60   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t61   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t62   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t63   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t64   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t65   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t66   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t67   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t68   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t69   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t70   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t71   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t72   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t73   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t74   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t75   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t76   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t77   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t78   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t79   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t80   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t81   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t82   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t83   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t84   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t85   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t86   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t87   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t88   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t89   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t90   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t91   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t92   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t93   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t94   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t95   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t96   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t97   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t98   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t99   | int          | YES  |     | NULL    |       |
+| pcapStats_temporal_DLTP_t100  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t1  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t2  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t3  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t4  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t5  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t6  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t7  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t8  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t9  | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t10 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t11 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t12 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t13 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t14 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t15 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t16 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t17 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t18 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t19 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t20 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t21 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t22 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t23 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t24 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t25 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t26 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t27 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t28 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t29 | int          | YES  |     | NULL    |       |
+| pcapStats_first30sec_DLTP_t30 | int          | YES  |     | NULL    |       |
+| totalDuration                 | float        | YES  |     | NULL    |       |
+| totalPacketCount              | float        | YES  | MUL | NULL    |       |
+| numberOfVideoChunks           | float        | YES  |     | NULL    |       |
+| numberOfAudioChunks           | float        | YES  |     | NULL    |       |
+| ratioOfChunksHTTP             | float        | YES  |     | NULL    |       |
+| videoChunkSizesHTTP_avg       | float        | YES  |     | NULL    |       |
+| videoChunkSizesHTTP_std       | float        | YES  |     | NULL    |       |
+| videoChunkSizesHTTP_min       | float        | YES  |     | NULL    |       |
+| videoChunkSizesHTTP_max       | float        | YES  |     | NULL    |       |
+| videoChunkSizesHTTP_p25       | float        | YES  |     | NULL    |       |
+| videoChunkSizesHTTP_p50       | float        | YES  |     | NULL    |       |
+| videoChunkSizesHTTP_p75       | float        | YES  |     | NULL    |       |
+| audioChunkSizesHTTP_avg       | float        | YES  |     | NULL    |       |
+| audioChunkSizesHTTP_std       | float        | YES  |     | NULL    |       |
+| audioChunkSizesHTTP_min       | float        | YES  |     | NULL    |       |
+| audioChunkSizesHTTP_max       | float        | YES  |     | NULL    |       |
+| audioChunkSizesHTTP_p25       | float        | YES  |     | NULL    |       |
+| audioChunkSizesHTTP_p50       | float        | YES  |     | NULL    |       |
+| audioChunkSizesHTTP_p75       | float        | YES  |     | NULL    |       |
+| videoChunkDursHTTP_avg        | float        | YES  |     | NULL    |       |
+| videoChunkDursHTTP_std        | float        | YES  |     | NULL    |       |
+| videoChunkDursHTTP_min        | float        | YES  |     | NULL    |       |
+| videoChunkDursHTTP_max        | float        | YES  |     | NULL    |       |
+| videoChunkDursHTTP_p25        | float        | YES  |     | NULL    |       |
+| videoChunkDursHTTP_p50        | float        | YES  |     | NULL    |       |
+| videoChunkDursHTTP_p75        | float        | YES  |     | NULL    |       |
+| audioChunkDursHTTP_avg        | float        | YES  |     | NULL    |       |
+| audioChunkDursHTTP_std        | float        | YES  |     | NULL    |       |
+| audioChunkDursHTTP_min        | float        | YES  |     | NULL    |       |
+| audioChunkDursHTTP_max        | float        | YES  |     | NULL    |       |
+| audioChunkDursHTTP_p25        | float        | YES  |     | NULL    |       |
+| audioChunkDursHTTP_p50        | float        | YES  |     | NULL    |       |
+| audioChunkDursHTTP_p75        | float        | YES  |     | NULL    |       |
+| chunkSizesPcap_avg            | float        | YES  |     | NULL    |       |
+| chunkSizesPcap_std            | float        | YES  |     | NULL    |       |
+| chunkSizesPcap_min            | float        | YES  |     | NULL    |       |
+| chunkSizesPcap_max            | float        | YES  |     | NULL    |       |
+| chunkSizesPcap_p25            | float        | YES  |     | NULL    |       |
+| chunkSizesPcap_p50            | float        | YES  |     | NULL    |       |
+| chunkSizesPcap_p75            | float        | YES  |     | NULL    |       |
+| chunkSizesPcapVideo_avg       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapVideo_std       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapVideo_min       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapVideo_max       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapVideo_p25       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapVideo_p50       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapVideo_p75       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapAudio_avg       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapAudio_std       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapAudio_min       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapAudio_max       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapAudio_p25       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapAudio_p50       | float        | YES  |     | NULL    |       |
+| chunkSizesPcapAudio_p75       | float        | YES  |     | NULL    |       |
+| kmeansCenterVideo             | float        | YES  |     | NULL    |       |
+| kmeansCenterAudio             | float        | YES  |     | NULL    |       |
+| avgResQual                    | float        | YES  |     | NULL    |       |
+| stdResQual                    | float        | YES  |     | NULL    |       |
+| maxResQual                    | float        | YES  |     | NULL    |       |
+| numberOfPosSwitches           | float        | YES  |     | NULL    |       |
+| numberOfNegSwitches           | float        | YES  |     | NULL    |       |
+| totalSwitches                 | float        | YES  |     | NULL    |       |
+| totalSwitchesAccumalate       | float        | YES  |     | NULL    |       |
+| numberOfPosSwitchesAcc        | float        | YES  |     | NULL    |       |
+| numberOfNegSwitchesAcc        | float        | YES  |     | NULL    |       |
+| dur                           | float        | YES  |     | NULL    |       |
+| QoE_JT                        | float        | YES  |     | NULL    |       |
+| QoE_noStall                   | float        | YES  |     | NULL    |       |
+| QoE_noSwitches                | float        | YES  |     | NULL    |       |
+| QoE_Linear                    | float        | YES  |     | NULL    |       |
+| QoE_Linear2                   | float        | YES  |     | NULL    |       |
+| QoE_Linear3                   | float        | YES  |     | NULL    |       |
+| QoE_LD_SD_HD                  | float        | YES  |     | NULL    |       |
+| QoE_ITU_023                   | float        | YES  |     | NULL    |       |
+| QoE_ITU_035                   | float        | YES  |     | NULL    |       |
+| QoE_ITU_046                   | float        | YES  |     | NULL    |       |
++-------------------------------+--------------+------+-----+---------+-------+
+270 rows in set (0,00 sec)
+
+
+
+
+Identifiants et Catégories :
+    videoID : Identifiant de la vidéo.
+    category : Catégorie de la vidéo.
+
+Bitrates :
+    bitrates_144p, bitrates_240p, bitrates_360p, bitrates_480p, bitrates_720p, bitrates_1080p : Bitrates pour différentes résolutions vidéo.
+
+Métriques de Performance :
+    join_time : Temps de chargement initial.
+    stallingNumber : Nombre de fois où la vidéo s'est arrêtée pour tamponner.
+    totalStallDuration : Durée totale des arrêts pour tamponnage.
+
+Qualité de Service (QoS) Hors Bande :
+    outbandQoS_DL_TP, outbandQoS_UL_TP, outbandQoS_RTT, outbandQoS_RTT_STD, outbandQoS_LOSS : Métriques de QoS mesurées hors du flux de trafic.
+
+Statistiques de Trafic Réseau :
+    pcapStats_stats_avg_DL_TP, pcapStats_stats_avg_UL_t, pcapStats_stats_avg_DL_t, pcapStats_stats_avg_DL_pkt : Statistiques moyennes de débit et de paquets.
+    pcapStats_stats_max_DL_TP, pcapStats_stats_max_UL_t, pcapStats_stats_max_DL_t, pcapStats_stats_max_DL_pkt : Statistiques maximales de débit et de paquets.
+    pcapStats_stats_std_DL_TP, pcapStats_stats_std_UL_t, pcapStats_stats_std_DL_t, pcapStats_stats_std_DL_pkt : Écarts-types des statistiques de débit et de paquets.
+    pcapStats_stats_p10_DL_TP, pcapStats_stats_p10_UL_t, pcapStats_stats_p10_DL_t, pcapStats_stats_p10_DL_pkt : Percentiles des statistiques de débit et de paquets (10e, 20e, ..., 90e). percentile = pourcentage mais pour le nombre de val (médiane = 50ème percentile)
+		
+DL_TP_TP :C'est la quantité moyenne de données reçues par seconde sur le lien descendant.
+UL/DL_t : C'est le temps moyen entre l'arrivée de paquets consécutifs sur le lien montant/desendant
+Statistiques Temporelles : 
+DL_pkt : Taille moyenne des paquets sur le lien descendant. C'est la taille moyenne des paquets reçus.
+
+    pcapStats_temporal_DLTP_t1, pcapStats_temporal_DLTP_t2, ..., pcapStats_temporal_DLTP_t100 : Statistiques de débit de liaison descendante à différents intervalles de temps.
+    pcapStats_first30sec_DLTP_t1, pcapStats_first30sec_DLTP_t2, ..., pcapStats_first30sec_DLTP_t30 : Statistiques de débit de liaison descendante pour les 30 premières secondes.
+
+
+
+Durée et Comptage de Paquets :
+
+    totalDuration : Durée totale de la vidéo.
+    totalPacketCount : Nombre total de paquets.
+
+Chunks Vidéo et Audio :
+
+    numberOfVideoChunks, numberOfAudioChunks : Nombre de chunks vidéo et audio.
+    ratioOfChunksHTTP : Ratio des chunks HTTP.
+    videoChunkSizesHTTP_avg, videoChunkSizesHTTP_std, videoChunkSizesHTTP_min, videoChunkSizesHTTP_max, videoChunkSizesHTTP_p25, videoChunkSizesHTTP_p50, videoChunkSizesHTTP_p75 : Statistiques sur les tailles des chunks vidéo.
+    audioChunkSizesHTTP_avg, audioChunkSizesHTTP_std, audioChunkSizesHTTP_min, audioChunkSizesHTTP_max, audioChunkSizesHTTP_p25, audioChunkSizesHTTP_p50, audioChunkSizesHTTP_p75 : Statistiques sur les tailles des chunks audio.
+
+
+Durée des Chunks :
+
+    videoChunkDursHTTP_avg, videoChunkDursHTTP_std, videoChunkDursHTTP_min, videoChunkDursHTTP_max, videoChunkDursHTTP_p25, videoChunkDursHTTP_p50, videoChunkDursHTTP_p75 : Statistiques sur les durées des chunks vidéo.
+    audioChunkDursHTTP_avg, audioChunkDursHTTP_std, audioChunkDursHTTP_min, audioChunkDursHTTP_max, audioChunkDursHTTP_p25, audioChunkDursHTTP_p50, audioChunkDursHTTP_p75 : Statistiques sur les durées des chunks audio.
+
+
+Statistiques sur les Chunks :
+
+    chunkSizesPcap_avg, chunkSizesPcap_std, chunkSizesPcap_min, chunkSizesPcap_max, chunkSizesPcap_p25, chunkSizesPcap_p50, chunkSizesPcap_p75 : Statistiques sur les tailles des chunks.
+    chunkSizesPcapVideo_avg, chunkSizesPcapVideo_std, chunkSizesPcapVideo_min, chunkSizesPcapVideo_max, chunkSizesPcapVideo_p25, chunkSizesPcapVideo_p50, chunkSizesPcapVideo_p75 : Statistiques sur les tailles des chunks vidéo.
+    chunkSizesPcapAudio_avg, chunkSizesPcapAudio_std, chunkSizesPcapAudio_min, chunkSizesPcapAudio_max, chunkSizesPcapAudio_p25, chunkSizesPcapAudio_p50, chunkSizesPcapAudio_p75 : Statistiques sur les tailles des chunks audio.
+
+Centres de K-means :
+
+    kmeansCenterVideo, kmeansCenterAudio : Centres de clusters pour les tailles de chunks vidéo et audio.
+
+Qualité de Résolution :
+
+    avgResQual, stdResQual, maxResQual : Qualité moyenne, écart-type et maximale de la résolution.
+
+Commutations de Qualité :
+
+    numberOfPosSwitches, numberOfNegSwitches, totalSwitches, totalSwitchesAccumalate, numberOfPosSwitchesAcc, numberOfNegSwitchesAcc : Nombre de commutations de qualité positives et négatives.
+
+Durée et QoE :
+
+    dur : Durée.
+    QoE_JT, QoE_noStall, QoE_noSwitches, QoE_Linear, QoE_Linear2, QoE_Linear3, QoE_LD_SD_HD, QoE_ITU_023, QoE_ITU_035, QoE_ITU_046 : Différentes métriques de QoE
