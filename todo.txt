@@ -1,0 +1,12 @@
+différence entre notre prediction QoE et les ITU ?
+split les colonnes entre données FAI et Youtube
+Faire un modèle pour chaque et comparer la diff entre les 2 modèles
+
+Bien définir les différentes valeurs QoE : linear1, lineear2, QoE_LD, etc ...
+
+Modifier les notations dans la présentation du dataset
+
+- parler de l'article
+le -1 dans la regression linéaire ?????
+
+https://www.canva.com/design/DAGolDatVnw/YgmF2Vf1OVlhDDsFnBVREQ/edit
